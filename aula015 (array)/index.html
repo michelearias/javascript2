@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript - Aula 15</title>
+    <script>
+        var mochila=[], pos
+
+        mochila.push('Faca') // push -  inserir no final
+        mochila.push('Corda')
+        mochila.push('Pederneira')
+        mochila.push('Chave')
+        mochila.push('Lanterna')
+        mochila.push('Pedra')
+
+        // document.write(mochila.indexOf('Lanterna')) // indexOf = verificar se um elemento está no array, busca um elemento array e retorna a posição do elemento. Neste caso retorna 4, que é a posição da lanterna
+
+        pos=mochila.indexOf('Pedra')
+
+        if(pos < 0){ // ou == -1
+            document.write('Item não está na mochila<br>')
+        }else{
+            document.write('Item está na mochila<br>')
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

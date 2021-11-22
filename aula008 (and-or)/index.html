@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript - Aula 8</title>
+    <script>
+        var pontos = 90
+        // vitoria -> >=30 && <=40 || >=70 && <=80
+
+        if (
+            ((pontos>=30)&&(pontos<=40))
+            ||
+            ((pontos>=70)&&(pontos<=80))
+        ) {
+            document.write('Ganhou!')
+        } else{
+            document.write('Perdeu!')
+        }
+    </script>
+</head>
+<body>
+    <!--uso quando eu tiver multiplos testes que irao envolver o retorno para uma condição-->
+
+    <!-- 
+        && - só retorno verdadeiro se tiver todos os testes retornando verdadeiro
+
+        || - só retorno falso se todos os testes retornarem falso. Basta um teste verdadeiro para ser verdadeiro.
+    -->
+</body>
+</html>

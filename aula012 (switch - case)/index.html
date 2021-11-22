@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript - Aula 12</title>
+    <script>
+        var pos, msg;
+
+        pos = 10 
+
+        switch(pos) {
+            case 1:
+            msg= 'Primeiro Lugar<br>Medalha de Ouro!';
+            break;
+            case 2:
+            msg='Segundo Lugar<br>Medalha de Prata!';
+            break;
+            case 3:
+            msg='Terceiro Lugar<br>Medalha de Bronze!';
+            break;
+            default:
+            msg='Não foi ao pódio<br>Não obteve medalha.'
+        }
+
+        switch (pos) {
+            case 1:
+            case 2:
+            case 3:
+                msg='Subiu ao pódio';
+                break;
+            default:
+                msg='Não obteve colocação'
+        }
+
+    </script>
+</head>
+<body>
+    <!-- utilizado quando sabemos os valores dos testes, diferente da utilização do if-->
+</body>
+</html>

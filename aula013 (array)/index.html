@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript - Aula 13</title>
+    <script>
+        // var cor=new Array() - modo de especificar array
+        var cor=[] // outra forma de utilizar array (colocando entre colchetes)
+
+        cor.push('Preto') // .push - método de inserir array no final
+        cor.push('Branco')
+        cor.push('Vermelho')
+        cor.push('Verde')
+        cor.push('Azul')
+
+        document.write(cor[0]) // [] - indica o indice que vai ser escrito na tela
+
+        cor[0]='Preto'
+        cor[1]='Branco'
+        cor[2]='Vermelho'
+        cor[3]='Verde'
+        cor[4]='Azul'
+        cor.push('Rosa')
+
+        document.write(cor[5])
+
+        var itens=['Faca', 'Pederneira', 'Corda', 'Lanterna', 'Luvas', 'Chave', 'Arame'] // itens possiveis no jogo
+        var mochila=[]
+
+        mochila.push(2) // adicionar itens na mochila 
+        document.write(itens[mochila[0]])
+    </script>
+</head>
+<body>
+    <!--Array é uma coleção de variáveis-->
+</body>
+</html>
