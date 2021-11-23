@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript - Aula 26</title>
+    <style>
+        a{
+            display: block;
+        }
+
+        .titulo{
+            color: #f00;
+            font-size: 20px;
+            text-decoration: underline;
+        }
+
+        div{
+            border: 1px solid #000;
+            padding: 10px;
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1 class="titulo">querySelectorAll</h1>
+    <p>O querySelectorAll() é um método que retorna os elementos do documento que corresponde a uma classe de CSS ou a uma tag especifica.</p>
+    <h2 class="titulo">Curso de Javascript</h2>
+    <p>www.youtube.com/cfbcursos</p>
+    <p class="titulo">cfbcursos.com.br</p>
+    <div>
+        <h3> Javascript Aula 26</h3>
+        <p>Este texto está dentro de uma div</p>
+        <p>Este também</p>
+    </div>
+    <div>
+        <h3> Javascript Aula 26</h3>
+        <p>Este texto está dentro de uma div</p>
+        <p>Este também</p>
+    </div>
+    
+    <a href="http://www.youtube.com/cfbcursos" target="_blank" rel="noopener noreferrer">CANAL</a>
+    <a href="http://cfbcursos.com.br" target="_blank" rel="noopener noreferrer">SITE</a>
+
+    <hr>
+
+    <script>
+
+        // var ps=document.querySelectorAll('p')
+        // document.write(ps[0].innerHTML)
+        // ps[0].style.color='blue' // mudar a cor do primeiro paragrafo 
+        // ps[0].innerHTML='NOVO TEXTO' // mudar o conteudo do primeiro paragrafo
+
+        var elementos=document.querySelectorAll('.titulo') // SELECIONAR TODOS OS ELEMENTOS QUE USAM A CLASSE TÍTULO. PARA RETORNAR SOMENTE OS P COM CLASSE TITULO POR EXEMPLO UTILIZAR p.titulo. PARA SELECIONAR VARIOS ELEMENTOS COLOCAR ('p,h1,h2')
+        for(var i=0;i<elementos.length;i++){
+            document.write(elementos[i].innerHTML+'<br>')
+        }
+
+        var elementos=document.querySelectorAll('div > p') 
+        for(var i=0;i<elementos.length;i++){
+            document.write(elementos[i].style.color='#0a0')
+        }
+        
+
+    </script>
+
+
+    <!-- posso selecionar uma quantidade maior, uma gama maior de elementos-->
+    
+</body>
+</html>

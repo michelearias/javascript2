@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript - Aula 28</title>
+    <script>
+        // document.write(Date()) // resulta a data e hora completa
+
+        var dt=new Date()
+
+        var ndt=new Date()
+        ndt.setFullYear(dt.getFullYear()+2) // set configura o ano, incrementando
+        var dia=dt.getDate() // retorna o dia do mês
+        var mes=dt.getMonth() // mês
+        var ano=dt.getFullYear() // ano
+        var diasem=dt.getDay() // dia da semana
+
+        var horas=dt.getHours() // horas
+        var minutos=dt.getMinutes() // minutos
+        var segundos=dt.getSeconds() // segundos
+
+        var meses=new Array('Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro')
+        var semanas=new Array('Domingo', 'Segunda-Feira', 'Terça-Feira', 'Quarta-feira', 'Quinta-Feira', 'Sexta-Feira', 'Sábado')
+
+        document.write(semanas[diasem] + ', ' + dia + ' de ' + meses[mes] + ' de ' + ano + '<br>')
+        document.write(horas + ':' + minutos + ':' + segundos)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

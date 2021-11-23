@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript - Aula 27</title>
+    <style>
+        label{
+            display: block;
+        }
+
+        input{
+            display: block;
+        }
+
+        input[type=submit],label{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <form name="curso1" id="curso1" action="#" method="post">
+        <label for="">Nome:</label>
+        <input type="text" name="fNome" id="teste" value="Primeiro -1">
+        <label for="">Senha:</label>
+        <input type="password" name="fSenha"  id="fSenha" value="123">
+        <input type="submit" name="btEnviar" value="Enviar">
+    </form>
+    
+    <hr>
+
+    <script>
+
+        // var fm= document.forms.length // length retorna a quantidade de elementos e forms retorna o formulário. document.forms[0].id para retonar o formulario de indice 1
+        //var fm=document.forms[1].id
+        //var fm=document.forms.item[0].id
+        //document.write(fm)
+
+        //var for11=document.forms.namedItem('curso1').innerHTML // RETORNAR O FORMULARIO
+        //document.write(for11)
+
+        document.write(document.getElementById('curso1').elements[0].value) // primeiro aponto para o formulario e depois aponto para os elementos.
+
+        var fm=document.forms[0]
+        var el=fm.elements
+
+        for(var i=0;i<el.length-1;i++){
+            el[i].style.backgroundColor='#ddd'
+            el[i].value='CFB Cursos'
+        }
+
+        // el[0].style.backgroundColor='#ddd'
+        // el[0].value='CFB Cursos'
+
+        // document.write(fm)
+
+
+
+    </script>
+</body>
+</html>
