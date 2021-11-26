@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript - Aula 31</title>
+    <script>
+
+        var nomeCor='Vermelho' // variaveis em escopos diferentes. Dentro de uma função consigo acessar as variaveis que estão fora. Diferentemente se eu tentar acessar as variaveis que estão dentro de uma função
+
+        function cor(){
+            var nomeCor='Azul' // escopo restrito a função cor
+            document.write(nomeCor+'<br>') // this.nomeCor para aparecer a variável global
+        }
+        cor()
+        document.write(nomeCor+'<br>')
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
