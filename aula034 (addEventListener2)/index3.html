@@ -22,7 +22,7 @@
         var px=0 // controlar o deslocamento na posição x - horizontal. No Js x para esquerda é negativo e x para a direita é positivo
         var py=0 // controlar o deslocamento na posição y - vertical. Y para baixo é positivo e Y para cima negativo
 
-        document.addEventListener('keydown', function(event){
+        function move(){
             var obj=document.getElementById('dv1')
             var tecla=event.keyCode // código da tecla que foi pressionada
             // 37-Esquerda - 38 - cima 39 - direita - 40-baixo
@@ -39,8 +39,14 @@
             }else if(tecla==40){ // deslocamento para baixo
                 py+=10
                 obj.style.top=py+'px'
+            }else if(tecla==13){ // tecla enter
+                alert('Evento keydown Removido') // quando a tecla enter for pressionada o alerta é emitido
+                document.removeEventListener('keydown',move) // a div nao vai mais se movimentar
             }
-        })
+        }
+
+        document.addEventListener('keydown',move)
+            
 
         
     </script>
