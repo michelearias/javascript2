@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript - Aula 40</title>
+    <style>
+        #jogador{
+            position:absolute;
+            top:0px;
+            left: 0px;
+            background-color: #00f;
+            width: 50px;
+            height: 50px;       
+        }
+    </style>
+
+    <script>
+
+        var jog // variavel global para receber elemento que vai ser animado
+        var vel // definir a velocidade
+        var dx // definir a direção deslocamento eixo x
+        var dy // definir a direção deslocamento eixo x
+        var px // definir a posição eixo x
+        var py // definir a posição eixo y
+        var anima // variavel de controle
+        var estado 
+
+        function inicia(){
+            vel=3
+            dx=1
+            dy=0
+            px=0
+            py=0
+            estado=1 // objeto esta se movendo=1 e objeto parado=0
+            jog=document.getElementById('jogador')
+            jog.addEventListener('click',moverParar)
+            document.getElementById('bt1').addEventListener('click',mover)
+            document.getElementById('bt2').addEventListener('click',parar)
+            game() 
+        }
+
+        function moverParar(){
+            if(estado){
+                estado=0 //parar a animação
+                jog.style.backgroundColor='#f00'
+                cancelAnimationFrame(anima)
+            }else{
+                estado=1 // vai se movimentar
+                jog.style.backgroundColor='#00f'
+                anima=requestAnimationFrame(game)
+            }
+        }
+
+        function mover(){
+            if(!estado){ // se estado for falso, ou estado =0 (parado)
+                estado=1
+                jog.style.backgroundColor='#00f'
+                anima=requestAnimationFrame(game)
+            }
+        }
+
+        function parar(){
+            estado=0
+            jog.style.backgroundColor='#f00'
+            cancelAnimationFrame(anima)
+        }
+
+        function game(){
+            px+=dx*vel
+            //py+=dy*vel
+            jog.style.left=px+'px'
+            //jog.style.top=py+'px'
+            if(px>800){
+                dx=-1 // vai para a esquerda
+            }else if(px<0){
+                dx=1 // vai para a direita
+            }
+            anima=requestAnimationFrame(game) // chamar a função varias vezes
+
+        }
+
+        window.addEventListener('load', inicia)
+    </script>
+</head>
+<body>
+
+    <div id="jogador"></div>
+    <button id="bt1">Iniciar</button>
+    <button id="bt2">Parar</button>
+    <!--
+        requestAnimationFrame = basta indicar a função que ele vai chamar e a administração do tempo/ intervalo quem vai fazer é o próprio browser
+    -->
+    
+</body>
+</html>
