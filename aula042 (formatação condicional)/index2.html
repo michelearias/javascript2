@@ -18,25 +18,34 @@
 <body>
     <div id="titulo"></div>
     
-    <table>
+    <table id="tbnotas">
         <tr>
             <th>Alunos</th><th>Nota 1</th><th>Nota 2</th><th>Resultado</th>
         </tr>
         <tr>
-            <td>Al1</td><td>35</td><td>48</td><td id="n1">83</td>
+            <td>Al1</td><td>35</td><td>48</td><td id="n1"></td>
         </tr>
         <tr>
-            <td>Al2</td><td>20</td><td>15</td><td id="n2">35</td>
+            <td>Al2</td><td>20</td><td>15</td><td id="n2"></td>
         </tr>
         <tr>
-            <td>Al3</td><td>48</td><td>48</td><td id="n3">96</td>
+            <td>Al3</td><td>48</td><td>48</td><td id="n3"></td>
         </tr>
         <tr>
-            <td>Al1</td><td>10</td><td>50</td><td id="n4">60</td>
+            <td>Al1</td><td>10</td><td>50</td><td id="n4"></td>
         </tr>
     </table>
 
     <script>
+
+        var tabela=document.getElementById('tbnotas')
+        var nota
+
+        for(var i=0; i<tabela.rows.length; i++){
+            nota=parseFloat(tabela.rows[i].cells[1].innerHTML)+parseFloat(tabela.rows[i].cells[2].innerHTML)
+            tabela.rows[i].cells[3].innerHTML=nota
+        }
+
         var n=[]
         n[0]=document.getElementById('n1')
         n[1]=document.getElementById('n2')

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript - Aula 43</title>
+    <style>
+        #dvslider{
+            width: 1000px;
+            height: 300px;
+            border: 1px solid #000;
+        }
+    </style>
+
+    <script>
+
+        var imgs=[]
+        var slider
+        var imgAtual
+        var maxImg
+        var tmp
+        var tempoTroca
+
+
+        function preCarregamento(){
+            var s=1
+            for(var i=0; i<5; i++)
+            imgs[i]=new Image()
+            imgs[i].src='imgs/s'+s+'.jpg'
+            s++
+        }
+
+        function carregarImg(img){
+            slider.style.backgroundImage="url('"+imgs[img].src+"')"
+
+        }
+
+        function iniciar(){
+            preCarregamento() // pre carreamento das imagens
+            imgAtual=1 // inicializar as imagens
+            maxImg=imgs.length-1 // numero maximo de imagens
+            slider=document.getElementById('dvslider')
+            caregarImg(imgAtual) // carregar imagem na div
+            tempoTroca=3000
+            tmp=setInterval(troca,tempoTroca)
+        }
+
+        function troca(){
+            imgAtual++ // incrementar em um para poder carregar a proxima imagem
+            if(imgAtual>maxImg){
+                imgAtual=0
+            }
+            carregaImg(imgAtual)
+        }
+
+        window.addEventListener('load', iniciar)
+    </script>
+</head>
+<body>
+    <div id="dvslider"></div>
+    
+</body>
+</html>

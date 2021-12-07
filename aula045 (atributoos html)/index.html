@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Jvascript - Aula 45</title>
+    <style>
+        #carro{
+            width: 200px;
+            height: 379px;
+        }
+
+        .c1{
+            background-image: url('imgs/c1.png');
+        }
+
+        .c2{
+            background-image: url('imgs/c2.png');
+        }
+
+        .c3{
+            background-image: url('imgs/c3.png');
+        }
+    </style>
+    <script>
+        function trocaCarro(){
+            var obj=document.getElmentById('carro')
+            if(c==1){
+                obj.setAttribute('class', 'c1') // setAttribute para adicionar qualquer atributo a qualuqer elemento
+            }else if(c==2){
+                obj.setAttribute('class', 'c2')
+            }else if(c==3){
+                obj.setAttribute('class', 'c3')
+            }
+        }
+
+        function removerCarro(){
+            var obj=document.getElement('carro')
+            obj.removeAttribute('class') // remove o atributo class que foi adicionado pela função
+        }
+
+        function verifica(){
+            var obj=document.getElementById('carro') // verificar se um atributo está na classe
+            if(obj.hasAttribute('class')){
+                alert('Atributo class está na tag')
+            }else{
+                alert('Sem atributo class')
+            }
+        }
+       
+    </script>
+</head>
+<body>
+    <button onclick="trocaCarro(1)">Carro 1</button>
+    <button onclick="trocaCarro(2)">Carro 2</button>
+    <button onclick="trocaCarro(3)">Carro 3</button>
+    <button onclick="removerCarro()">Remover Carro</button>
+    <button onclick="verifica()">Verificar</button>
+    <div id="carro"></div>
+</body>
+</html>

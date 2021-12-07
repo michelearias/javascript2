@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript - Aula 46</title>
+</head>
+<body>
+
+    <p id="txt">
+        CFB Cursos - Curso de Javascript - aula 46 do curso de javascript
+    </p>
+
+    <script>
+        var texto=document.getElementById('txt').innerHTML
+        var res=texto.match('aula') // procurar a palavra aula. se não encontrar o retorno é null
+        var res=texto.match('aula')
+        document.write(res)
+        document.write(res.length) // retorna o tamanho do resultado
+    </script>
+
+
+    <!-- 
+        método match - procurar dentro da string. possibilita varias formas de pesquisa. Faz uma busca dentro da string por um texto especifico
+    -->
+    
+</body>
+</html>

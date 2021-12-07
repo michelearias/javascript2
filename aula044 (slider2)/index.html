@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript - Aula 43</title>
+    <style>
+        #dvslider{
+            width: 1000px;
+            height: 300px;
+            border: 1px solid #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+
+        .btSlider{
+            background-color: rgba(0,0,0,0.4);
+            height: 30%;
+            color: #fff;
+            cursor: pointer; 
+            outline: none;
+            margin:10px;
+            border: none;    
+        }
+
+        #dvload{
+            width: 1000px;
+            height: 5px;
+            margin-top: 25%;
+            border: 1px solid #000;
+        }
+
+        #dvbarra{
+            width: 0%;
+            height: 100px;
+            background-color: rgb(231, 210, 210);
+        }
+    </style>
+
+    <script>
+
+        var imgs=[]
+        var slider
+        var imgAtual
+        var maxImg
+        var tmp
+        var tempoTroca
+        var vtempo
+        var vload
+
+
+        function preCarregamento(){
+            var s=1
+            for(var i=0; i<5; i++)
+            imgs[i]=new Image()
+            imgs[i].src='imgs/s'+s+'.jpg'
+            s++
+        }
+
+        function carregarImg(img){
+            slider.style.backgroundImage="url('"+imgs[img].src+"')"
+
+        }
+
+        function iniciar(){
+            preCarregamento() // pre carreamento das imagens
+            imgAtual=1 // inicializar as imagens
+            maxImg=imgs.length-1 // numero maximo de imagens
+            slider=document.getElementById('dvslider')
+            vbarra=document.getElementById('dvbarra')
+            caregarImg(imgAtual) // carregar imagem na div
+            tempoTroca=0 // inicialização da contagem do tempo, serve como contador para o tempo
+            tmp=setInterval(troca,tempoTroca)
+            anima()
+        }
+
+        function troca(dir){
+            tempoTroca=0 // zerar o tempo de troca
+            imgAtual+=dir // incrementar em um para poder carregar a proxima imagem
+            if(imgAtual>maxImg){
+                imgAtual=0
+            }else if(imgAtual<0){
+                imgAtual=maxImg
+            }
+            carregaImg(imgAtual)
+        }
+
+        function anima(){
+            tempoTroca++
+            if(tempoTroca >= 500){
+                tempoTroca=0
+                troca(1)
+            }
+            vtempo=tempoTroca/5
+            vbarra.style.width=vtempo+'%'
+            window.requestAnimationFrame(anima)
+        }
+
+        window.addEventListener('load', iniciar)
+    </script>
+</head>
+<body>
+    <div id="dvslider">
+        <button class="btSlider" onclick="troca(-1)"><</button>
+        <div id="dvload">
+            <div id="dvbarra"></div>
+        </div>
+        <button class="btSlider" onclick="troca(1)">></button>
+    </div>
+    
+</body>
+</html>
