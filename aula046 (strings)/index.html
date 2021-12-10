@@ -19,7 +19,15 @@
         document.write(res)
         document.write(res.length) // retorna o tamanho do resultado
         var resul=texto.match(/de/g) // modificador g - mostrar todas as ocorrencias encontradas
-        document.write(resul)
+        var result=texto.match(/javascript/ig) // modificador ig mostra todos os resultados
+        var resulta=texto.match(/[oa]/ig) // para mostrar todos os resultados de letras a e letras o
+        var resultad=texto.match(/[^oa]/ig)// mostra todos os caracteres menos as letras a e o 
+        var resultadoo=texto.match(/[a-g]/ig)//mostra os resultados entre a letra a e g
+        document.write(resul + '<br>')
+        document.write(result + '<br>')
+        document.write(resulta + '<br>')
+        document.write(resultad + '<br>')
+        document.write(resultadoo + '<br>')
     </script>
 
 

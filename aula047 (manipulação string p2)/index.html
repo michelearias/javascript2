@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript - Aula 47</title>
+</head>
+<body>
+    <p id="txt">CFB Cursos - Curso de Javascript - aula 47 do curso de javascript</p>
+    
+    <script>
+        var texto=document.getElementById('txt').innerHTML
+
+        var txt2='aula 47 do curso de javascript'
+
+        var res=texto.search(/curso/i) // método search não trabalha com array, só trabalha com a primeira ocorrencia encontrada. i - pesquisa dentro da string e mostra a posição da primeira ocorrência encontrada. Indica que o curso começa na posição 4
+
+        var resu=texto.replace(/curso/i, 'aula') // substituir a palavra curso por aula. aplicado só ao primeiro com o modificador i
+
+        var resul=texto.replace(/curso/ig, 'aula') // substitui todos as palavras  curso
+
+        var result=texto.charAt(2) // retorna o caracter que indiquei como a posição do parametro do match
+
+        var resulta=texto.charCodeAt(0) // retorna o código relacionado ao caractere
+
+        var resulta=texto.charCodeAt(0) // informo o código e ele me retorna o caractere
+
+        var resultad=texto.concat(txt2) // junta uma string na outra
+
+        document.write(res + '<br>')
+        document.write(resu + '<br>')
+        document.write(resul + '<br>')
+        document.write(result + '<br>')
+        document.write(resulta + '<br>')
+        document.write(String.fromCharCode(resulta)) // mostra o caractere com a informação do código
+        document.write(resultad + '<br>')
+    </script>
+</body>
+</html>
