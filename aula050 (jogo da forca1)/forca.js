@@ -11,4 +11,4 @@ var erros=0
 var desenhos=[]
 var acertou=false
 var jogando=false
-//
+//dddddhhhsh
