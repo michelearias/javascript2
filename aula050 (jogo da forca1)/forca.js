@@ -11,6 +11,7 @@ var erros=0
 var desenhos=[]
 var acertou=false
 var jogando=false
+var jog
 
 function defineLetras(L){////////////
     var obj
@@ -24,13 +25,12 @@ function defineLetras(L){////////////
 }
 
 function jogar(){
-    jog=document.getElementById('letraJ')
+    //jog=document.getElementById('letraJ')
     jog.focus()
     if(jog.value==''){/////////
         alert('Digite uma letra')
     }else{
         if (jogando){
-            var jog
             var obj
             var letraTmp
             var letra
@@ -48,7 +48,7 @@ function jogar(){
                 acertou=true
             }
             if(!acertou){
-                document.getElementById('dvletrasdigitadas').innerHTML+=letra.toUpperCase
+                document.getElementById('dvletrasdigitadas').innerHTML+=letra.toUpperCase()
                 erros++
                 if(erros<7){
                     desenhos[erros].style.display='block'
@@ -59,7 +59,7 @@ function jogar(){
                 }
             }
             if(acertos==tam){
-                document.getElementById('dvmsg').innerHTML=''
+                //document.getElementById('dvmsg').innerHTML=''
                 document.getElementById('dvmsg').innerHTML='GANHOU'
                 jogando=false
             }
