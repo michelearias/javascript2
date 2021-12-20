@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript - Aula 68</title>
+    <style>
+        body{
+            background-color: #f00;
+            color: #fff;
+        }
+
+        a{
+            color: #fff;
+        }
+
+    </style>
+
+    <script>
+
+        var auxiliar=location.hash // resgatar a passagem de parametros
+        var dados=auxiliar.split('#') //obter dados separados
+        var v1=dados[1]
+        var v2=dados[2]
+        document.write(v1)
+        document.write('<br>')
+        var h= location.hostname // aparece o endereço do host, ffunciona apenas online
+        var ur=location.href // obter a url ou citar a url
+        //var ur=location.href='http://www.youtube.com' // 
+        var o= location.origin //mostrar o protocolo, o hostname e o numero da porta 
+        var p=location.pathname // retorna o caminho após o protocolo e o hostname
+        var po=location.port // retorna a porta
+        var pr=location.protocol // retorna o protocolo da url
+
+        document.write(ur)
+        document.write('<hr>')
+        document.write(o)
+        document.write('<hr>')
+        document.write(p)
+        document.write('<hr>')
+        document.write(pr)
+
+        // auxiliar=location.search
+        // dados=auxiliar.split('?')
+        // v1=dados[1].split('=')[1]
+        // document.write(v1)
+
+    </script>
+</head>
+<body>
+
+    <h1>Página 2 - p2.html</h1>
+
+    <a href="index.html">Voltar</a>
+
+    <!--
+        location - manipular a url da pagina, obter informações da url
+        
+    -->
+    
+</body>
+</html>
