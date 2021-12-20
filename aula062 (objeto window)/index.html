@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de javascript - Aula 62</title>
+    <script>
+        var minhaJanela
+
+        function abrejanela(){
+             window.open('index2.html', '_blank', 'width=300, height=300, top=300,left=300') //fazer a abertura de uma nova janela
+            //_blank - abrir em uma nova janela
+            //_self - abrir na mesma janela
+        }
+
+        function fecharjanela(){
+            minhaJanela.close // fechar a janela
+        }
+        
+    </script>
+</head>
+<body>
+
+    <button onclick="abrejanela()">Abre Nova Janela</button>
+    <button onclick="fecharjanela()">Fechar Janela</button>
+
+    <iframe name="cfb" src="" frameborder="0"></iframe>
+    <!--
+        window - permite abrir e gerenciar uma nova janela em javascript. posso abrir essa janela como uma pagina existente ou uma url de algum site existente. também possui métodos para poder adicionar conteudo nessa janela aberta.
+    -->
+    
+</body>
+</html>
