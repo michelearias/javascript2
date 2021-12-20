@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript - Aula 65</title>
+    <style>
+        #painel{
+            width: 400px;
+            height: 500px;
+            border: 1px solid #000;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+    </style>
+
+    <script>
+        var painel
+
+        function localizar(pos){
+            var c=pos.coords
+            painel.innerHTML+='Localização: Lat: ' + c.latitude + ' - Lon: ' + c.longitude + '<hr>'
+        }
+
+        function verifica(){
+            painel=document.getElementById('painel')
+            painel.innerHTML='Nome do Browser: ' + navigator.appName + '<hr>'  // retorna o nome do browser
+            painel.innerHTML+='Versão do Browser: ' + navigator.appVersion + '<hr>'
+            painel.innerHTML+='Cookies: ' + navigator.cookieEnabled + '<hr>'
+            navigator.geolocation.getCurrentPosition(localizar) + '<hr>'
+            painel.innerHTML+='Idioma: ' + navigator.language + '<hr>'
+            painel.innerHTML+='onLine: ' + navigator.onLine + '<hr>' // diz se o browser esta online ou não
+            painel.innerHTML+='S.O: ' + navigator.platform + '<hr>' // qual o sistema operacional esta rodando
+            painel.innerHTML+='Engine: ' + navigator.product + '<hr>' // obter a engine do browser
+            painel.innerHTML+='Agente: ' + navigator.userAgent + '<hr>' // obter qual agente foi usado pelo servidor
+
+        }
+
+        window.addEventListener('load', verifica)
+
+    </script>
+
+</head>
+<body>
+    <div id="painel"></div>
+
+    <!--possibilita obter informações do navegador-->
+    
+</body>
+</html>

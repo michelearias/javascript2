@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript - Aula 64</title>
+    <style>
+        iframe{
+            border: 1px solid #ddd;
+        }
+
+    </style>
+
+    <script>
+        function inicia(){
+            var qtde=window.length // obter a quantidade de frames que tenho na minha pagina
+            var painel=document.getElementById('painel').innerHTML=qtde
+            //for(var i=0;i<qtde;i++){
+                //window.frames[i].location='http://cfbcursos.com.br' // direciono para o numero do frame que eu quero trabalhar / i-todos os frames
+            //}
+            //window.frames[0].location='http://cfbcursos.com.br' //permite direcionar uma url para essa pagina 
+        }
+
+        window.addEventListener('load',inicia)
+    </script>
+</head>
+<body>
+
+    <iframe src="index3.html" frameborder="0"></iframe>
+    <iframe src="index3.html" frameborder="0"></iframe>
+    <iframe src="index3.html" frameborder="0"></iframe>
+
+    <div id="painel"></div>
+    
+</body>
+</html>

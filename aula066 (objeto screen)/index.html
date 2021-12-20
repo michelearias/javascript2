@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript - Aula 66</title>
+    <style>
+
+        #painel{
+            width: 400px;
+            height: 500px;
+            border: 1px solid #000;
+            border-radius: 10px;
+            padding: 10px;
+        }
+    </style>
+    <script>
+
+        var painel
+
+        function inicia(){
+            painel=document.getElementById('painel')
+            painel.innerHTML+='Largura: ' +screen.width + 'px<hr>'
+            //disponibiliza informaçoes referentes as configurações de resolução da tela da pessoa que esta visualizando o site. n tem relação com o browser e sim com a tela
+            painel.innerHTML+='Altura: ' +screen.height + 'px<hr>'
+            painel.innerHTML+='Largura disponível: ' +screen.availWidth + 'px<hr>' // mostra a largura disponivel da tela
+            painel.innerHTML+='Altura disponível: ' +screen.availHeight + 'px<hr>' // mostra a altura disponivel da tela, tirando a barra de tarefas etc
+            painel.innerHTML+='Profundidade de cores(imagens): ' +screen.colorDepth + 'bits<hr>' // retorna a profundidade em bits da paleta de cores para exibir imagens
+            painel.innerHTML+='Resolução cor da tela(pixel): ' +screen.pixelDepth + 'bits/pixel<hr>'// retorna a resolução da cor da tela  
+        }
+
+        window.addEventListener('load',inicia)
+    </script>
+</head>
+<body>
+    <div id="painel"></div>
+    
+</body>
+</html>

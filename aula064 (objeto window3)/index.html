@@ -4,9 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso de jAVASCRIPT - Aula 64</title>
+    <title>Curso de Javasript - Aula 63
+    </title>
+    <style>
+        #painel{
+            border: 1px solid #000;
+            border-radius: 10px;
+            padding: 15px;
+            width: 2000px;
+            height: 2000px;
+            background-color: #ddd;
+        }
+    </style>
+
+    <script>
+        var largura, altura, px, py, painel
+
+        function info(){
+            largura=window.innerWidth // obtenho a largura interna da janela // outerWidth - obter a largura externa da janela
+            altura=window.innerHeight // obter a altura altura interna da janela
+            px=window.screenX // obter a posição x
+            py=window.screenY //obter a posição y
+            painel.innerHTML='L:'+largura+' - A:'+altura+'<br>X:'+px+' Y:'+py
+        }
+
+        function rolar(){
+            window.scrollBy(500,500) // método do objeto da classe window. precisa de dois parametros (valores para o x e para o y ). permite posicionar em determinado ponto da tela.
+        }
+       
+        function inicia(){
+            document.getElementById('btnTam').addEventListener('click',info)
+            document.getElementById('btnPos').addEventListener('click',rolar)
+            painel=document.getElementById('painel')
+           
+        }
+
+        window.addEventListener('load',inicia)
+
+    </script>
 </head>
 <body>
+    <button id="btnTam">Tamanho</button>
+    <button id="btnPos">Rolar</button>
+
+    <div id="painel"></div>
     
 </body>
 </html>
