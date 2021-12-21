@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript - Aula 70 </title>
+    <script>
+
+        if(typeof(Storage)!='undefined'){
+            localStorage.setItem('canal', 'cfbCursos') // define uma chave
+        //localStorage.removeItem('canal') // remove a chave
+
+            var vcanal=localStorage.getItem('canal')
+            document.write(vcanal)
+        }else{
+            document.write('Sem suporte a Web Storage')
+        }
+        
+    </script>
+</head>
+<body>
+    <!--crio area de armazenamento dentro do browser e posso armazenar um dado no formato chave valor. Armazenamento local, na maquina do usuario-->
+    
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript - Aula 70</title>
+    <style>
+        #fconf{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            border: 1px solid #000;
+            background-color: #888;
+            padding: 30px;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+    <script>
+
+        var vcorf,vcort,vnomes
+
+        function inicia(){
+            if(localStorage.nomes){
+            var vcorf=localStorage.corf
+            var vcort=localStorage.cort
+            vnomes=localStorage.nomes
+            defineCor(1,vcorf)
+            defineCor(2,vcort)
+            document.getElementById('painel').innerHTML='Bem vindo ' +vnomes+ '<hr>'
+        }
+
+    }
+
+        function gravar(){
+            var form=document.getElementById('fconf')
+            vnomes=document.getElementById('fnome').value
+            localStorage.corf=vcorf
+            localStorage.cort=vcort
+            localStorage.nomes=vnomes
+            form.style.display='none'
+        }
+
+        function defineCor(op,cor){
+            if(op==1){
+                document.body.style.backgroundColor=cor
+                vcorf=cor
+            }else{
+                document.body.style.color=cor
+                vcort=cor
+            }
+        }
+
+        function mostraConf(){
+            var form=document.getElementById('fconf')
+            form.style.display='block'
+        }
+
+        window.addEventListener('load', inicia)
+        
+    </script>
+</head>
+<body>
+    <p>LocalStorage - Curso de Javascript</p>
+    <p id="painel"></p>
+
+    <button onclick="mostraConf()">Configurações</button>
+
+    <form action="" name="fconf" id="fconf">
+        <label for="">Nome:</label><br>
+        <input type="text" name="fnome" id="fnome" size="20"><br><br>
+        <label for="">Cor fundo:</label><br>
+        <input type="radio" name="fcorF" id="fcorF" onclick="defineCor(1,'#000')">Preto<br>
+        <input type="radio" name="fcorF" id="fcorF" onclick="defineCor(1,'#fff')">Branco<br>
+        <input type="radio" name="fcorF" id="fcorF" onclick="defineCor(1,'#f00')">Vermelho<br>
+        <input type="radio" name="fcorF" id="fcorF" onclick="defineCor(1,'#0f0')">Verde<br>
+        <input type="radio" name="fcorF" id="fcorF" onclick="defineCor(1,'#00f')">Azul<br><br>
+        <label for="">Cor texto:</label><br>
+        <input type="radio" name="fcorT" id="fcorT" onclick="defineCor(2,'#000')">Preto<br>
+        <input type="radio" name="fcorT" id="fcorT" onclick="defineCor(2,'#fff')">Branco<br>
+        <input type="button" value="Gravar" onclick="gravar()">
+
+    </form>
+    
+</body>
+</html>
