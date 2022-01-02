@@ -9,11 +9,8 @@
 
     <script>
         function pagina(pg){
-            if(pg==2){
-                window.location.assign('p2.html')
-            }else if(pg==3){
-                window.location.assign('p3.html')
-            }
+            sessionStorage.nome=document.getElementById('fnome').value
+            window.location.assign('p'+pg+'.html')
         }
 
         function inicia(){
