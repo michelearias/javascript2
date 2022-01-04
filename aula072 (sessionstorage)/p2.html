@@ -8,8 +8,18 @@
     <style>
         body{
             background-color: #f0f;
+            color: #fff;
         }
     </style>
+    <script>
+
+        function inicia(){
+            session.getElementById('painel').innerHTML=sessionStorage.nome
+        }
+        window.addEventListener('load',inicia)
+
+
+    </script>
 </head>
 <body>
     <h2>Página 2</h2>

@@ -9,10 +9,11 @@
 
     <script>
         function pagina(pg){
+            session.storage.nome=document.getElementById('fnome').value // pegar o valor e armazenar
             if(pg==2){
-                window.location.assign('p2.html')
+                window.location.assign('p'+pg+'.html')
             }else if(pg==3){
-                window.location.assign('p3.html')
+                window.location.assign('p3.html)')
             }
         }
 
@@ -34,7 +35,7 @@
     <button id="btnp2">Página 2</button>
     <button id="btnp3">Página 3</button>
     <!--
-        sessionstorage - ao fechar o browser ele é deletado, é um armazenamento temporario
+        sessionstorage - ao fechar o browser todo o conteudo armazenado é deletado, é um armazenamento temporario
     -->
     
 </body>
