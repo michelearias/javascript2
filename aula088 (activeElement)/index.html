@@ -7,14 +7,30 @@
     <title>Curso de Javascript - Aula 88</title>
     <script>
 
-        function ativo(){
+        var dvcx
+
+        function loop(){
+            dvcx.innerHTML=document.activeElement
+            frames=requestAnimationFrame(loop)
+        }
+
+        /*function ativo(){
             var elemento=document.activeElement.tagName // retorna o nome do elemento ativo 
             console.log(elemento)
+        }*/
+
+        function inicia(){
+            dvcx=document.getElementById('cx')
+            loop()
         }
+
+        window.addEventListener('load',inicia)
 
     </script>
 </head>
 <body>
+
+    <div id="cx"></div>
 
     <input type="text" name="txt">
     <button>Teste</button>
