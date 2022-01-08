@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript - Aula 91</title>
+    <style>
+        .carro{
+            width: 371px;
+            height: 750px;
+            display: block;
+            margin-bottom: 50px;
+        }
+        .menu_item{
+            height: 100%;
+            cursor: pointer;
+        }
+        #menu{
+            border: solid 3px #000;
+            border-radius: 10px;
+            padding: 10px;
+            width: 500px;
+            height: 100px;
+            position: fixed;
+            top: 10px;
+            left: 400px;
+            background-color: #fff;
+        }
+
+        body{
+            padding: 0px;
+        }
+    </style>
+
+    <script>
+
+        function rolar(){
+            var obj=document.getElementById('c3').scrollIntoView()
+        }
+
+    </script>
+</head>
+<body>
+    <div id="menu">
+        <button onclick="rolar()">Rolar</button>
+        <img src="c1.png" id="btnc1" class="menu_item" alt="">
+        <img src="c2.png" id="btnc2" class="menu_item" alt="">
+        <img src="c3.png" id="btnc3" class="menu_item" alt="">
+        <img src="c4.png" id="btnc4" class="menu_item" alt="">
+    </div>
+    <img src="c1.png" id="c1" class="carro" alt="">
+    <img src="c2.png" id="c2" class="carro" alt="">
+    <img src="c3.png" id="c3" class="carro" alt="">
+    <img src="c4.png" id="c4" class="carro" alt="">
+    
+</body>
+</html>
