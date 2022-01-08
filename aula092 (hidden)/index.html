@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript - Aula 92</title>
+    <style>
+        .carro{
+            width: 250px;
+            margin-bottom: 50px;
+        }
+        .menu_item{
+            height: 100%;
+            cursor: pointer;
+        }
+        #menu{
+            border: solid 3px #000;
+            border-radius: 10px;
+            padding: 10px;
+            width: 500px;
+            height: 100px;
+            background-color: #fff;
+        }
+
+        body{
+            padding: 0px;
+        }
+    </style>
+
+    <script>
+
+        function rolar(){
+            var obj=event.target.dataset.nome
+            document.getElementById(obj).scrollIntoView()
+            
+        }
+
+        function inicia(){
+            document.getElementById('btnc1').addEventListener('click',rolar)
+            document.getElementById('btnc2').addEventListener('click',rolar)
+            document.getElementById('btnc3').addEventListener('click',rolar)
+            document.getElementById('btnc4').addEventListener('click',rolar)
+
+            document.getElementById('c4').hidden=true //ocultar o elemento c4
+
+        }
+
+       window.addEventListener('load',inicia)
+
+    </script>
+</head>
+<body>
+    <div id="menu">
+        <img src="c1.png" id="btnc1" class="menu_item" alt="" data-nome="c1">
+        <img src="c2.png" id="btnc2" class="menu_item" alt="" data-nome="c2">
+        <img src="c3.png" id="btnc3" class="menu_item" alt="" data-nome="c3">
+        <img src="c4.png" id="btnc4" class="menu_item" alt="" data-nome="c4">
+    </div>
+    <img src="c1.png" id="c1" class="carro" alt="">
+    <img src="c2.png" id="c2" class="carro" alt="">
+    <img src="c3.png" id="c3" class="carro" alt="">
+    <img src="c4.png" id="c4" class="carro" alt="">
+    
+</body>
+</html>
