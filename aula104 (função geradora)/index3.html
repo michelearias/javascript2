@@ -9,19 +9,21 @@
         // função geradora - permite a devolução do controle para quem fez a chamada da função. No meio do processo se eu quiser devolver o controle pra quem fez a chamada.
 
 
-        function* cores(){ // função geradora colocar *
-           yield 'Vermelho'
-           yield 'Verde'
-           yield 'Azul'
-           yield 'Amarelo'
-           yield 'Roxo'
-           yield 'Preto'
-           yield 'Branco'
+        function* cont(n){ // função geradora colocar *
+           
+           let c=0
+           while(c<n){
+               yield console.log(c)
+               c++
+           }
         }
 
-        for(let c of cores()){ // for gerencia o next automticamente
-            console.log(c)
-        }
+        const ct=cont(10)
+        console.log(ct.next)
+        console.log(ct.next)
+        console.log(ct.next)
+        console.log(ct.next)
+        
     </script>
 </head>
 <body>
