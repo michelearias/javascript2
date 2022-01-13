@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript - Aula 107</title>
+    <script>
+        let num=[5,1,4,2,3]
+        //for(n of num)
+        //console.log(n)
+        let it=num[Symbol.iterator]() // a partir do iteratpor consigo manipular os elementos da nossa coleção
+        //let v=it.next().value
+        //let tam=num.length
+        //console.log(tam)
+
+        for(let i=0;i<num.length;i++){
+            let v=it.next().value
+            //v%2 > 0 ? console.log('Impar') : console.log('Par') - posso fazer com operação ternaria, podendo assim sustituir o if
+            if(v%2 > 0){
+                console.log('Impar')
+            }else{
+                console.log('Par')
+            }
+        }
+        //console.log(it.next())
+        //console.log(it.next())
+        //console.log(it.next())
+        //console.log(it.next())
+        //console.log(it.next())
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
