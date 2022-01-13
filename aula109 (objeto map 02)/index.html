@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript - Aula 108</title>
+    <script>
+        // map -coleção de par (chave-valor). Tanto chave quanto valor pode ser de qualquer tipo para definir tanto a chave quanto o valor de um map
+
+        let produtos = new Map([
+            ['01','Mouse'],
+            ['02','Teclado'],
+            ['03','Monitor'],
+            ['04','Gabinete']
+        ])
+
+        produtos.set('05','Memoria')
+
+        //produtos.clear // método para apagar os elementos do nosso map
+
+        produtos.delete('03') //delete - para deletar um determinado elemento
+
+        console.log('Tamanho: ' + produtos.size) // numero de elementos do nosso map
+
+        for(p of produtos)
+        console.log(p)
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
