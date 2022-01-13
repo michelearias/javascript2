@@ -17,6 +17,15 @@
             }
         }
 
+        const c2=Object.create(Carro)
+        const c3=Object.create(Carro)
+
+        c2.marca='Honda'
+        c2.modelo='HRV'
+
+        c3.marca='Fiat'
+        c3.modelo='Toro'
+
         Carro.marca='Honda'
         Carro.modelo='HRV'
 
@@ -24,6 +33,8 @@
         Carro['modelo']='Camaro'
 
         Carro.info()
+        c2.info()
+        c3.info()
 
         //console.log(Carro.marca)
         //console.log(Carro.modelo)
