@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript - Aula 110</title>
+    <script>
+
+        // programação orientada a objetos - paradigma do desenvolvimento de software que tenta imitar uma modelagem de acordo com o mundo real. POO considera um programa com uma coleção de objetos, que podem ou não se comunicar entre si. construimos uma classe que é o esqueleto do objeto e posso atraves dessa classe instanciar novos objetos.
+
+        // atributos das classes - são as propriedades das classes, variaveis que eu aplico as classes. Coloco diretamente o nome do atributo
+
+        class Carro{
+            //cor='Vermelho' // posso atribuir aqui a variavel ou dentro do metodo constructor
+            //metodo construtor - metodo que tem o mesmo nome da classe
+            constructor(){ // AUTOMATICAMENTE SERA CHAMADO QUANDO EU INSTANCIAR UM OBJETO DESSA CLASSE.
+                this.cor='Vermelho' // this - trazer referencia a propria classe
+                console.log('Olá, sou um novo carro: ' + this.cor)
+
+            }
+
+        }
+
+        let c1=new Carro() // instanciar um objeto dessa classe. Cada um desses objetos são diferentes entre si
+        
+        let c2=new Carro()
+        let c3=new Carro()
+        let c4=new Carro()
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
