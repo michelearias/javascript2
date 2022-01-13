@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript - Aula 114</title>
+    <script>
+        //herança - uma classe vai herdar outra classe. A classe que está sendo herdada chamo de classe pai/classe base. E a classe filho é que está herdando (tudo que esta na classe pai)
+
+        class Carro{
+            constructor(tpCarro, tpComb){
+                this.tipo=tpCarro // 1- passeio, 2 - transporte, 3-combate
+                this.qtdeComb=100
+                this.ligado=false
+                this.tipoComb=tpComb // 1 - gasolina, 2 - diesel, 3 - etanol
+            }
+            info(){
+                console.log('Qtde Combus: ' + this.qtdeComb)
+                console.log('Ligado.....: ' + (this.ligado ? 'Sim' : 'Não'))
+                console.log('Tipo Combus: ' + this.tipoComb)
+                if(this.tipo==1){
+                    console.log('Tipo Carro: Passeio')
+                }else if(this.tipo==2){
+                    console.log('Tipo Carro: Transporte')
+                }else{
+                    console.log('Tipo Carro: Combate')
+                }
+                
+            }
+            set setLigado(t){
+                this.ligado=t
+            }
+            get getLigado(){
+                return this.ligado
+            }
+            set setComb(v){
+                if(v<0 || v>100){
+                    alert('Valor inválido')
+                }else{
+                    this.qtdeComb=v
+                }
+            }
+            get getComb(){
+                return this.qtdeComb
+            }
+        }
+
+        class CarroCombate extends Carro{// CarroCombate vai herdar carro, ela esta herdando carro, tudo que tem em carro vou ter em carro de combate
+            constructor(potTiro){
+                super(3,2) // super - definindo que estou acessando algo da classe pai
+                this.tiros=1000
+                this.potTiro=potTiro
+                this.blindagem=100
+            }
+            info(){
+                super.info()
+                console.log('Qtde Tiros: ' + this.tiros)
+                console.log('Pot Tiro...: ' + this.potTiro)
+                console.log('Blindagem...: ' + this.blindagem)
+                console.log('----------------------------')
+            }
+        } 
+
+        class CarroTransporte extends Carro{
+            constructor(){
+                super(2,2)
+            }
+        }
+
+        let c1=new CarroCombate(100)
+        let c2=new CarroTransporte()
+
+        c1.setLigado=true
+        c1.info() // imprime as informações da classe base
+        c2.info()
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
