@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript - Aula 118</title>
+    <script>
+        // gerar um novo array. Com os elementos de um array existente ele vai aplicar uma funcionalidade a cada elemento desse array e vai gerar um novo array com os elementos operados
+
+        let num=[1,4,9,16,25]
+        let raiz=num.map(Math.sqrt) //operar a raiz quadada e armazenar em uma nova posição nesse array raiz
+
+        //for(r of raiz)
+        //console.log(r)
+
+        for(let i=0;i<5;i++){
+            console.log('Número: ' + num[i] + ' - Raiz: ' + raiz[i])
+        }
+
+        let dobros=num.map((n)=>{
+            return n*2
+        })
+        console.log('----------------------')
+
+        for(let i=0;i<5;i++){
+            console.log('Número: ' + num[i] + ' - Dobro: ' + dobros[i])
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
