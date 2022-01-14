@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript - Aula 121</title>
+    <script>
+        // método reduce - retornar como resultado o resumo do array. Aplica essa função nos elementos, sendo que a função recebe dois valores e a partir da segunda iteração recebe o retorno dessa função aplicada ao próximo elemento
+
+        let pessoa=[
+            {nome:'Bruno',idade:40},
+            {nome:'Arlindo',idade:30},
+            {nome:'Fatsgirda',idade:25},
+            {nome:'Glebsonaldo',idade:18},
+        ]
+        let nomes=pessoa.reduce((p1,p2)=>{
+            p1.push(p2.nome)
+            return p1
+
+        },[])
+
+        console.log(nomes)
+
+        let idades=pessoa.reduce((p1,p2)=>{
+            p1.push(p2.idade)
+            return p1
+
+        },[])
+
+        console.log(idades)
+
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

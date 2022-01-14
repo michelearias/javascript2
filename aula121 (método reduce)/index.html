@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript - Aula 121</title>
+    <script>
+        // método reduce - retornar como resultado o resumo do array. Aplica essa função nos elementos, sendo que a função recebe dois valores e a partir da segunda iteração recebe o retorno dessa função aplicada ao próximo elemento
+
+        let num=[0,1,2,3,4,5]
+        let soma=num.reduce((n1,n2)=>{
+            console.log(n1 + ' - ' + n2)
+            return n1+n2
+            console.log('---------------------')
+
+        })
+
+        console.log(soma)
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
