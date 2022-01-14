@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript - Aula 122</title>
+    <script>
+        let colabJSON='{"colaboradores":['+
+        '{"nome":"Bruno","salario":10000,"idade":40},'+
+        '{"nome":"Blendasia","salario":13500,"idade":32},'+
+        '{"nome":"Clixiston","salario":8200,"idade":25},'+
+        '{"nome":"Fernalis","salario":35000,"idade":38},'+
+        '{"nome":"Nilsetucus","salario":5000,"idade":21},'+
+
+        ']}'
+
+        let colabOBJ=[
+        {"nome":"Bruno","salario":10000,"idade":40},
+        {"nome":"Blendasia","salario":13500,"idade":32},
+        {"nome":"Clixiston","salario":8200,"idade":25},
+        {"nome":"Fernalis","salario":35000,"idade":38},
+        {"nome":"Nilsetucus","salario":5000,"idade":21}
+        ]
+
+        let colab={"nome":"Bruno","salario":10000,"idade":40}
+
+
+        let c_obj=JSON.parse(colabJSON) // parse - converter em objeto literal
+        //stringify - converter o objeto em JSON
+
+        let c_json=JSON.stringify(colabOBJ)
+
+        //console.log(colabJSON)
+
+        //console.log(c_obj.colaboradores)
+
+        console.log(colab)
+        console.log('-----------------------')
+        console.log(JSON.stringify(colabOBJ))
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>
